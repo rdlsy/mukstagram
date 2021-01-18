@@ -1,8 +1,8 @@
 # 먹스타그램
 
 ### 기술 스택
-Server - Node.js, Express, Mongoose
-Client - React, redux, redux-thunk, axios, react-router, styled-components
+- Server - Node.js, Express, Mongoose
+- Client - React, redux, redux-thunk, axios, react-router, styled-components
 
 
 
