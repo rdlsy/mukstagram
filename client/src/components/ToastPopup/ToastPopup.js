@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ToastBlock } from './style';
 
-function ToastPopup({ open, text }) {
+function ToastPopup({ text }) {
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    setAnimate(true)
+    setTimeout(() => {
+      setAnimate(false);
+    }, 2000)
+  }, []);
   return (
-    <ToastBlock className={open ? 'open' : ''}>
+    <ToastBlock className={animate ? 'open' : ''}>
       {text}
     </ToastBlock>
   );

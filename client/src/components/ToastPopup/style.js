@@ -12,7 +12,7 @@ export const ToastBlock = styled.div`
   color: ${props => props.theme.colors.popupTextColor};
   white-space:nowrap;
   opacity: 0;
-  transition: .2s;
+  transition: .3s;
   z-index: 12;
   &.open {
     opacity: 1;

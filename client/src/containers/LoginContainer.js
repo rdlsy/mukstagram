@@ -16,7 +16,6 @@ function LoginContainer(props) {
         if (response.payload.loginSuccess) {
           setOpen(true);
           setTimeout(() => {
-            setOpen(false);
             props.history.push('/mukjya');
           }, 2000)
         } else {
@@ -34,7 +33,7 @@ function LoginContainer(props) {
   
   return (
     <>
-      <ToastPopup open={open} text="로그인에 성공했습니다. ☺️" />
+      {open && <ToastPopup text="로그인에 성공했습니다. ☺️" />}
       <Login onSubmit={onSubmit} errorMsg={errorMsg} open={open} />
     </>
   )

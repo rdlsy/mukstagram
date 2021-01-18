@@ -84,7 +84,6 @@ function UploadContainer(props) {
         if (response.payload.success) {
           setOpen(true);
           setTimeout(() => {
-            setOpen(false);
             props.history.push('/mukjya');
           }, 2000)
         } else {
@@ -95,7 +94,7 @@ function UploadContainer(props) {
 
   return (
     <>
-      <ToastPopup open={open} text="성공적으로 업로드를 했습니다. ☺️" />
+      {open && <ToastPopup text="성공적으로 업로드를 했습니다. ☺️" />}
       <Upload back={back} onSubmit={onSubmit} onDrop={onDrop} uploadImage={uploadImage} filePath={fileInfo.filePath} thumbnail={videoInfo.thumbnail} />
     </>
   )
