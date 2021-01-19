@@ -5,6 +5,14 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const config = require('./config/key');
 
+const mongoose = require('mongoose');
+mongoose.connect(config.mongoURI, {
+  useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: true
+}).then(() => console.log('MongoDB Connected...'))
+  .catch(err => console.log(err))
+
+  app.use(cors())
+
 // application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -17,12 +25,6 @@ app.use('/api/posts', require('./routes/posts'));
 app.use('/api/comments', require('./routes/comments'));
 app.use('/api/like', require('./routes/like'));
 app.use('/uploads', express.static('uploads'));
-
-const mongoose = require('mongoose');
-mongoose.connect(config.mongoURI, {
-  useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: true
-}).then(() => console.log('MongoDB Connected...'))
-  .catch(err => console.log(err))
 
 // Serve static assets if in production
 if (process.env.NODE_ENV === 'production') {
