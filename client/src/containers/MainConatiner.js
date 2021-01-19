@@ -44,11 +44,11 @@ function MainConatiner(props) {
         <Route 
           exact
           path={url} 
-          render={() => posts ? <Main posts={posts} /> : <None />}
+          render={() => posts.length ? <Main posts={posts} /> : <None />}
         />
         <Route 
           path={`${url}/feed`} 
-          render={() => posts ? <Feed posts={posts} /> : <None />}
+          render={() => posts.length ? <Feed posts={posts} /> : <None />}
         />
       </ListWrap>
     </Container>
