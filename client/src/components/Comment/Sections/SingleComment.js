@@ -17,6 +17,7 @@ function SingleComment({ comment, handleClick }) {
     id: comment._id,
     name: comment.writer.name
   }
+
   const variable = useMemo(() => ({
     commentId: comment._id,
     userId: user.userData._id

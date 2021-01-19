@@ -101,7 +101,7 @@ export default function Comment({ postId, post, comments, refreshFc, detail, com
               value={value} 
               maxRows={4}
               minRows={1}
-              placeholder="댓길 달기..."
+              placeholder="댓글 달기..."
             />
             <button disabled={value ? false: true}>게시</button>
           </div>

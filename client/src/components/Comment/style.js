@@ -54,7 +54,8 @@ export const CommentInsert = styled.div`
       width: 0;
       font-size: .9rem;
       resize: none;
-      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color: ${props => props.theme.colors.textColor}
     }
     button {
       font-size: .9rem;
