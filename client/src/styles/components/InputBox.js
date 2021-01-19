@@ -23,6 +23,7 @@ const Input = styled.div`
     padding: 18.5px 14px;
     height: 56px;
     font-size: 1.2rem;
+    color: ${props => props.theme.colors.textColor};
   }
   label {
     position: absolute;
