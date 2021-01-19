@@ -11,7 +11,8 @@
     "start": "node ./server/index.js",
     "backend": "nodemon ./server/index.js",
     "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "sy-lee",
   "license": "ISC",
