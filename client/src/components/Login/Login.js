@@ -67,12 +67,11 @@ export default function Login({ onSubmit, errorMsg }) {
             onChange={handleChange}
             errors={errors.password}
             touched={touched.password}
-            autocomplete="off"
           />
           {
             errorMsg && <ErrorText >{errorMsg}</ErrorText>
           }
-          <Button blue type="submit"  onClick={handleSubmit} disabled={isSubmitting}>SIGN UP</Button>
+          <Button blue type="submit"  onClick={handleSubmit} disabled={isSubmitting}>SIGN IN</Button>
         </LoginForm>
         <TextField>Don't have an account? <Link to="/register">Create an account.</Link></TextField>
       </Container>

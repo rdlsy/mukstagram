@@ -23,7 +23,6 @@ const Input = styled.div`
     padding: 18.5px 14px;
     height: 56px;
     font-size: 1.2rem;
-    color: ${props => props.theme.colors.textColor};
   }
   label {
     position: absolute;
@@ -47,7 +46,7 @@ const Input = styled.div`
   }
 `;
 
-function InputBox({ type, id, name, value, label, onChange, errors, touched, autocomplete }) {
+function InputBox({ type, id, name, value, label, onChange, errors, touched }) {
   const [focus, setFocus] = useState('');
   return (
     <InputWrap className={value ? 'completion' : ''}>
@@ -61,7 +60,7 @@ function InputBox({ type, id, name, value, label, onChange, errors, touched, aut
           onChange={onChange}
           onFocus={(e) => setFocus(e.target.id)}
           onBlur={() => setFocus('')}
-          autoComplete={autocomplete}
+          autoComplete="off"
         />
       </Input>
       {errors && touched && (

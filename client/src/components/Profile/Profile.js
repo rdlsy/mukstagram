@@ -19,7 +19,7 @@ export default function Profile({ user }) {
             <Text description></Text>
           </Introduce>
         </div>
-        <Text m_description>안녕하세용!!!</Text>
+        <Text m_description></Text>
       </ProfileWrap>
       {/* <ItemBlock text="프로필 편집" /> */}
     </Container>
