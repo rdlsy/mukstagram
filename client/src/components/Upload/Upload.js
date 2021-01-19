@@ -6,7 +6,7 @@ import { UploadContent, UploadForm, DropBox, TextBox, Drop } from './style';
 import Switch from '../../styles/components/Switch';
 import Dropzone from 'react-dropzone';
 
-export default function Upload({ onSubmit, uploadImage, onDrop, back, uploadImg }) {
+export default function Upload({ onSubmit, uploadImage, onDrop, back }) {
   const [description, setDescription] = useState('');
   const [privacy, setPrivacy] = useState(false);
   const onChange = e => {
@@ -39,7 +39,7 @@ export default function Upload({ onSubmit, uploadImage, onDrop, back, uploadImg 
             {
               uploadImage ?
               <DropBox>
-                <img src={`http://localhost:5000/${uploadImage}`} alt="" />
+                <img src={`https://mukstagram.herokuapp.com/${uploadImage}`} alt="" />
               </DropBox> :
               <Dropzone
                 onDrop={onDrop}
