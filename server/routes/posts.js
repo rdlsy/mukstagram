@@ -14,8 +14,8 @@ let storage = multer.diskStorage({
   },
   fileFilter: (req, file, cb) => {
     const ext = path.extname(file.originalname)
-    if (ext !== '.mp4') {
-      return cb(res.status(400).end('only mp4 is allowed'), false);
+    if (ext !== '.mp4' || ext !== '.jpg') {
+      return cb(res.status(400).end('only mp4, jpg are allowed'), false);
     }
     cb(null, true)
   }
