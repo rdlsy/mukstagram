@@ -29,6 +29,7 @@ const Input = styled.div`
     position: absolute;
     top: 0;
     left: 0;
+    display: block;
     font-size: 1.2rem;
     color: #8e8e8e;
     transform: translate(14px, 18px) scale(1);
