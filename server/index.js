@@ -12,6 +12,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
+app.use(express.static(path.join(__dirname, '../client/build')));
+app.get('*', (req, res)=>{
+  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+});
+
 app.use('/api/users', require('./routes/users'));
 app.use('/api/posts', require('./routes/posts'));
 app.use('/api/comments', require('./routes/comments'));
