@@ -8,7 +8,7 @@ function ToastPopup({ text }) {
     setAnimate(true)
     setTimeout(() => {
       setAnimate(false);
-    }, 2000)
+    }, 1000)
   }, []);
   return (
     <ToastBlock className={animate ? 'open' : ''}>
