@@ -4,12 +4,15 @@ export const ProfileWrap = styled.section`
   max-width: 935px;
   width: 100%;
   margin: 0 auto;
+  padding-top: 30px;
+  background-color: ${props => props.theme.colors.contBgColor};
   .Wrap {
     display: flex;
     flex-direction: row;
-    padding: 0 16px 30px;
+    padding: 0 16px 44px;
   }
   @media ${props => props.theme.mobile} {
+    padding-top: 16px;
     .Wrap {
       padding-bottom: 24px;
     }

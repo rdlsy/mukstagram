@@ -15,7 +15,8 @@ export const PostList = styled.div`
   }
   @media ${props => props.theme.mobile} {
     padding: 0 0 44px;
-    margin: -1px;
+    margin: 0 -1px -1px;
+    background-color: ${props => props.theme.colors.bgColor};
     .post {
       padding: 1px;
       margin: 0;

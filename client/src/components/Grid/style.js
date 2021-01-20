@@ -7,6 +7,7 @@ export const ListWrap = styled.section`
   }
 `;
 export const Layout = styled.div`
+  display: none;
   background-color: ${props => props.theme.colors.bgColor};
   border-top: 1px solid ${props => props.theme.colors.borderColor};
   border-bottom: 1px solid ${props => props.theme.colors.borderColor};
@@ -19,6 +20,9 @@ export const Layout = styled.div`
         color: ${props => props.theme.colors.textColor};
       }
     }
+  }
+  @media ${props => props.theme.mobile} {
+    display: block;
   }
 `;
 export const PostList = styled.div`
@@ -73,8 +77,9 @@ export const PostList = styled.div`
       drop-shadow(0 0 .75px rgba(0,0,0,.42)) drop-shadow(0 1px .5px rgba(0,0,0,.18)) drop-shadow(0 2px 3px rgba(0,0,0,.2))
   }
   @media ${props => props.theme.mobile} {
+    background-color: ${props => props.theme.colors.bgColor};
     padding: 0 0 44px;
-    margin: -1px;
+    margin: 0 -1px -1px;
     .post {
       padding: 1px;
       border: none;

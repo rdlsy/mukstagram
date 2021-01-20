@@ -118,6 +118,7 @@ export const Container = styled.div`
       }
       @media ${props => props.theme.mobile} {
         padding: 44px 0 0;
+        background-color: ${props => props.theme.colors.bgColor};
         .post {
           max-width: 100%;
           min-height: auto;
@@ -173,9 +174,10 @@ export const Container = styled.div`
   ${props =>
     props.mypage &&
     css`
-      padding: 84px 0 0;
+      padding: 54px 0 64px;
       @media ${props => props.theme.mobile} {
-        padding: 60px 0 0;
+        padding: 44px 0 64px;
+        background-color: ${props.theme.colors.bgColor};
       }
     `
   }
@@ -221,7 +223,7 @@ export const Box = styled.div`
 
 export const Text = styled.div`
   padding: 0 16px;
-  padding-bottom: 8px;
+  padding-bottom: 12px;
   color: ${props => props.theme.colors.contTextColor};
   .profile {
     display: none;

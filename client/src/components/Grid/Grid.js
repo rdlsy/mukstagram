@@ -2,7 +2,7 @@ import React from 'react';
 import { PostList } from './style';
 import { Link } from 'react-router-dom';
 
-export default function Main({ posts }) {
+export default function Grid({ posts }) {
 
   const Post = posts.map((post, index) => {
     const minutes = Math.floor(post.duration / 60);
@@ -14,7 +14,7 @@ export default function Main({ posts }) {
           {
             post.thumbnail ?
             <>
-              <img src={`https://mukstagram.herokuapp.com/${post.thumbnail}`} alt="thumnail" />
+              <img src={`http://localhost:5000/${post.thumbnail}`} alt="thumnail" />
               <div className="duration">
                 <span>{minutes} : {seconds}</span>
               </div>
@@ -24,7 +24,7 @@ export default function Main({ posts }) {
                 </svg>
               </div>
             </> :
-            <img src={`https://mukstagram.herokuapp.com/${post.filePath}`} alt="" width="320" height="320" />
+            <img src={`http://localhost:5000/${post.filePath}`} alt="" width="320" height="320" />
           }
         </Link>
       </div>
