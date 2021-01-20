@@ -112,7 +112,8 @@ router.post('/getPostDetail', (req, res) => {
 router.post('/getMyPosts', (req, res) => {
 
   // 포스트를 DB에서 가져와서 클라이언트에 보낸다.
-  Post.findOne({ 'writer' : req.body.userId })
+  Post.find({ 'writer' : req.body.userId })
+    .populate('writer')
     .exec((err, posts) => {
       if (err) return res.status(400).send(err);
       return res.status(200).json({ success: true, posts })
