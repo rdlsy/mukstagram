@@ -16,6 +16,7 @@ function RegisterContainer(props) {
           setOpen(true);
           setTimeout(() => {
             props.history.push('/login');
+            setOpen(false);
           }, 2000)
         } else {
           alert(response.payload.err.errmsg)

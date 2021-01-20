@@ -39,7 +39,7 @@ export default function Upload({ onSubmit, uploadImage, onDrop, back }) {
             {
               uploadImage ?
               <DropBox>
-                <img src={`https://mukstagram.herokuapp.com/${uploadImage}`} alt="" />
+                <img src={`http://localhost:5000/${uploadImage}`} alt="" />
               </DropBox> :
               <Dropzone
                 onDrop={onDrop}

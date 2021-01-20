@@ -15,8 +15,10 @@ function LoginContainer(props) {
       .then(response => {
         if (response.payload.loginSuccess) {
           setOpen(true);
+          window.localStorage.setItem('userId', response.payload.userId);
           setTimeout(() => {
             props.history.push('/mukjya');
+            setOpen(false);
           }, 2000)
         } else {
           setErrorMsg('Check out your Account or Password again')
