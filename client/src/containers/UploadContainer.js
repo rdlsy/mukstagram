@@ -85,6 +85,7 @@ function UploadContainer(props) {
           setOpen(true);
           setTimeout(() => {
             props.history.push('/mukjya');
+            setOpen(false);
           }, 2000)
         } else {
           alert('파일 업로드에 실패했습니다.')
