@@ -3,6 +3,7 @@ import { PostBlock, Img} from './style';
 import CommentContainer from '../../containers/CommentContainer';
 import PostTitle from './Section/PostTitle';
 import PostMenu from './Section/PostMenu';
+import User from '../../styles/components/User';
 
 export default function Post({ post, detail }) {
   const regdate = new Date(post.updatedAt).toLocaleDateString('ko-KR', {
@@ -25,6 +26,10 @@ export default function Post({ post, detail }) {
   
   return (
     <PostBlock className="post">
+      <User
+        image={post.writer.image}
+        userName={post.writer.name}
+      />
       <Img className="img">
         {
           post.thumbnail ?

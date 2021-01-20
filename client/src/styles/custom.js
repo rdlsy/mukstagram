@@ -75,6 +75,9 @@ export const Container = styled.div`
         padding-right: 335px;
         margin: 0 auto;
         border: 1px solid ${props => props.theme.colors.borderColor};
+        .userInfo {
+          display: none;
+        }
         .img {
           width: 100%;
         }
@@ -122,6 +125,9 @@ export const Container = styled.div`
           border: none;
           .img {
             margin: 0;
+          }
+          .userInfo {
+            display: flex;
           }
           .textBox {
             position: inherit;

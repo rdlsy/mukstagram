@@ -8,6 +8,7 @@ const NoneBlock = styled.div`
   justify-content: center;
   align-items: center;
   padding: 60px 0;
+  background-color: ${props => props.theme.colors.contBgColor};
   font-size: 1.3rem;
   font-weight: 600;
   color: ${props => props.theme.colors.textColor};
