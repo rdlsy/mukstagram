@@ -17,7 +17,7 @@ function LoginContainer(props) {
           setOpen(true);
           window.localStorage.setItem('userId', response.payload.userId);
           setTimeout(() => {
-            props.history.push('/mukjya');
+            props.history.push('/');
             setOpen(false);
           }, 2000)
         } else {

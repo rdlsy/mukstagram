@@ -84,7 +84,7 @@ function UploadContainer(props) {
         if (response.payload.success) {
           setOpen(true);
           setTimeout(() => {
-            props.history.push('/mukjya');
+            props.history.push('/');
             setOpen(false);
           }, 2000)
         } else {

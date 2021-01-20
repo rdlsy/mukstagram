@@ -35,6 +35,8 @@ function ProfileContainer(props) {
       })
   }, [dispatch, userId]);
 
+  console.log(url, pathName)
+
   return (
     <Container mypage>
       {loading && <Loading />}

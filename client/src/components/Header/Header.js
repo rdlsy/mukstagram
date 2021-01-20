@@ -27,7 +27,7 @@ export default function Header({ onLogout, toggleTheme, theme, user }) {
             <BsToggleOn />
           }
         </button>
-        <Logo><Link to="/mukjya">mukstagram</Link></Logo>
+        <Logo><Link to="/">mukstagram</Link></Logo>
         {
           user.userData && !user.userData.isAuth ?
           <button onClick={() => setActive(!active)}>

@@ -24,13 +24,13 @@ function App() {
       <GlobalStyle />
       <HeaderContainer toggleTheme={toggleTheme} theme={theme2}  />
       <Switch>
-        <Route exac path="/mukjya" component={Auth(MainPage, null)}></Route>
-        <Route exac path="/post/:id" component={Auth(PostPage, null)}></Route>
-        <Route exac path="/register" component={Auth(RegisterPage, false)}></Route>
-        <Route exac path="/login" component={Auth(LoginPage, false)}></Route>
+        <Route exact path="/" component={Auth(MainPage, null)}></Route>
+        <Route exact path="/post/:id" component={Auth(PostPage, null)}></Route>
+        <Route exact path="/register" component={Auth(RegisterPage, false)}></Route>
+        <Route exact path="/login" component={Auth(LoginPage, false)}></Route>
         {/* <Route exact path="/map" component={MapPage}></Route> */}
-        <Route exac path="/profile" component={Auth(ProfilePage, true)}></Route>
-        <Route exac path="/upload" component={Auth(UploadPage, true)}></Route>
+        <Route exact path="/profile" component={Auth(ProfilePage, true)}></Route>
+        <Route exact path="/upload" component={Auth(UploadPage, true)}></Route>
       </Switch>
       <Footer />
     </ThemeProvider>
