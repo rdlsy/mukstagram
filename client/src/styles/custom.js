@@ -41,6 +41,7 @@ export const Container = styled.div`
   background-color: ${props => props.theme.colors.contBgColor};
   @media ${props => props.theme.mobile} {
     padding: 46px 0 64px;
+    background-color: ${props => props.theme.colors.bgColor};
   }
   ${props =>
     props.popup &&
