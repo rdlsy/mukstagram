@@ -5,4 +5,5 @@ export const LOGOUT_USER = 'LOGOUT_USER';
 
 export const GET_POSTS = 'GET_POSTS';
 export const GET_POST_DETAIL = 'GET_POST_DETAIL';
+export const GET_MY_POSTS = 'GET_MY_POSTS';
 export const UPLOAD_POST = 'UPLOAD_POST';

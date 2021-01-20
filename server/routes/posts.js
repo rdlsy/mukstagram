@@ -93,7 +93,7 @@ router.get('/getPosts', (req, res) => {
   Post.find()
     .populate('writer')
     .exec((err, posts) => {
-      if(err) return res.status(400).send(err);
+      if (err) return res.status(400).send(err);
         res.status(200).json({ success: true, posts })
     })
 });
@@ -104,8 +104,18 @@ router.post('/getPostDetail', (req, res) => {
   Post.findOne({ '_id' : req.body.postId })
     .populate('writer')
     .exec((err, postDetail) => {
-      if(err) return res.status(400).send(err);
+      if (err) return res.status(400).send(err);
       return res.status(200).json({ success: true, postDetail })
+    })
+});
+
+router.post('/getMyPosts', (req, res) => {
+
+  // 포스트를 DB에서 가져와서 클라이언트에 보낸다.
+  Post.findOne({ 'writer' : req.body.userId })
+    .exec((err, posts) => {
+      if (err) return res.status(400).send(err);
+      return res.status(200).json({ success: true, posts })
     })
 });
 

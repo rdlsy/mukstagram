@@ -1,6 +1,7 @@
 import {
   GET_POSTS,
   GET_POST_DETAIL,
+  GET_MY_POSTS,
   UPLOAD_POST
 } from '../_action/types/types';
 
@@ -11,6 +12,8 @@ export default function post(state = {}, action){
       return { ...state, posts: action.payload }
     case GET_POST_DETAIL:
       return { ...state, postDetail: action.payload }
+    case GET_MY_POSTS:
+      return { ...state, posts: action.payload }
     case UPLOAD_POST:
       return { ...state, uploadPost: action.payload }
     default:

@@ -2,6 +2,7 @@ import axios from 'axios';
 import {
   GET_POSTS,
   GET_POST_DETAIL,
+  GET_MY_POSTS,
   UPLOAD_POST
 } from './types/types';
 import { POST_SERVER } from '../components/Config.js';
@@ -22,6 +23,16 @@ export function getPostDetail(id) {
     
   return {
     type: GET_POST_DETAIL,
+    payload: request
+  }
+}
+
+export function getMyPosts(id) {
+  const request = axios.post(`${POST_SERVER}/getMyPosts`, id)
+    .then(response => response.data);
+    
+  return {
+    type: GET_MY_POSTS,
     payload: request
   }
 }
