@@ -16,6 +16,7 @@ const ItemBlock = styled.div`
     border-top: 1px solid ${props => props.theme.colors.borderColor};
     border-bottom: 1px solid ${props => props.theme.colors.borderColor};
     font-size: 1rem;
+    color: ${props => props.theme.colors.contTextColor};
     cursor: pointer;
     svg {
       font-size: 1.6rem;
