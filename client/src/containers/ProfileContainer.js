@@ -27,6 +27,7 @@ function ProfileContainer(props) {
       .then(response => {
         if (response.payload.success) {
           let data = response.payload.posts;
+          console.log(response.payload)
           setLoading(false);
           setPosts(data.reverse());
         } else {
@@ -34,8 +35,6 @@ function ProfileContainer(props) {
         }
       })
   }, [dispatch, userId]);
-
-  console.log(url, pathName)
 
   return (
     <Container mypage>
