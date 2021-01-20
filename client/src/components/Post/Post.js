@@ -33,8 +33,8 @@ export default function Post({ post, detail }) {
       <Img className="img">
         {
           post.thumbnail ?
-          <video style={{ width: '100%' }} src={`http://localhost:5000/${post.filePath}`} controls /> :
-          <img src={`http://localhost:5000/${post.filePath}`} alt="" />
+          <video style={{ width: '100%' }} src={`https://mukstagram.herokuapp.com/${post.filePath}`} controls /> :
+          <img src={`https://mukstagram.herokuapp.com/${post.filePath}`} alt="" />
         }
       </Img>
       <div className="textBox">

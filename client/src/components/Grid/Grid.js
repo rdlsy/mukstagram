@@ -14,7 +14,7 @@ export default function Grid({ posts }) {
           {
             post.thumbnail ?
             <>
-              <img src={`http://localhost:5000/${post.thumbnail}`} alt="thumnail" />
+              <img src={`https://mukstagram.herokuapp.com/${post.thumbnail}`} alt="thumnail" />
               <div className="duration">
                 <span>{minutes} : {seconds}</span>
               </div>
@@ -24,7 +24,7 @@ export default function Grid({ posts }) {
                 </svg>
               </div>
             </> :
-            <img src={`http://localhost:5000/${post.filePath}`} alt="" width="320" height="320" />
+            <img src={`https://mukstagram.herokuapp.com/${post.filePath}`} alt="" width="320" height="320" />
           }
         </Link>
       </div>
