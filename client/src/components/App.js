@@ -29,7 +29,7 @@ function App() {
         <Route exact path="/register" component={Auth(RegisterPage, false)}></Route>
         <Route exact path="/login" component={Auth(LoginPage, false)}></Route>
         {/* <Route exact path="/map" component={MapPage}></Route> */}
-        <Route exact path="/profile" component={Auth(ProfilePage, true)}></Route>
+        <Route path="/profile" component={Auth(ProfilePage, true)}></Route>
         <Route exact path="/upload" component={Auth(UploadPage, true)}></Route>
       </Switch>
       <Footer />
