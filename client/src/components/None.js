@@ -26,6 +26,9 @@ const NoneBlock = styled.div`
       color: ${props => props.theme.colors.textColor};
     }
   }
+  @media ${props => props.theme.mobile} {
+    background-color: ${props => props.theme.colors.bgColor};
+  }
 `;
 
 function None() {
