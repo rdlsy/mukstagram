@@ -7,6 +7,9 @@ export default function Grid({ posts }) {
   const Post = posts.map((post, index) => {
     const minutes = Math.floor(post.duration / 60);
     const seconds = Math.floor((post.duration - minutes * 60));
+    let url = process.env.NODE_ENV === 'development' ? 
+      `http://localhost:5000/${post.filePath}` : 
+      `https://mukstagram.herokuapp.com/${post.filePath}`;
 
     return (
       <div key={index} className="post">
@@ -14,7 +17,7 @@ export default function Grid({ posts }) {
           {
             post.thumbnail ?
             <>
-              <img src={`https://mukstagram.herokuapp.com/${post.thumbnail}`} alt="thumnail" />
+              <img src={url} alt="thumnail" />
               <div className="duration">
                 <span>{minutes} : {seconds}</span>
               </div>
@@ -24,7 +27,7 @@ export default function Grid({ posts }) {
                 </svg>
               </div>
             </> :
-            <img src={`https://mukstagram.herokuapp.com/${post.filePath}`} alt="" width="320" height="320" />
+            <img src={url} alt="" width="320" height="320" />
           }
         </Link>
       </div>

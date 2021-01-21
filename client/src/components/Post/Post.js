@@ -12,6 +12,9 @@ export default function Post({ post, detail }) {
     day: 'numeric',
   });
   const [width, setWidth] = useState(window.innerWidth);
+  let url = process.env.NODE_ENV === 'development' ? 
+    `http://localhost:5000/${post.filePath}` : 
+    `https://mukstagram.herokuapp.com/${post.filePath}`;
 
   const commInput = useRef();
   const onFocus = () => {
@@ -33,8 +36,8 @@ export default function Post({ post, detail }) {
       <Img className="img">
         {
           post.thumbnail ?
-          <video style={{ width: '100%' }} src={`https://mukstagram.herokuapp.com/${post.filePath}`} controls /> :
-          <img src={`https://mukstagram.herokuapp.com/${post.filePath}`} alt="" />
+          <video style={{ width: '100%' }} src={url} controls /> :
+          <img src={url} alt="" />
         }
       </Img>
       <div className="textBox">

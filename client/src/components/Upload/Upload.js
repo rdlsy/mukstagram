@@ -9,6 +9,9 @@ import Dropzone from 'react-dropzone';
 export default function Upload({ onSubmit, uploadImage, onDrop, back }) {
   const [description, setDescription] = useState('');
   const [privacy, setPrivacy] = useState(false);
+  let url = process.env.NODE_ENV === 'development' ? 
+    `http://localhost:5000/${uploadImage}` : 
+    `https://mukstagram.herokuapp.com/${uploadImage}`;
   const onChange = e => {
     setDescription(e.target.value);
   }
@@ -39,7 +42,7 @@ export default function Upload({ onSubmit, uploadImage, onDrop, back }) {
             {
               uploadImage ?
               <DropBox>
-                <img src={`https://mukstagram.herokuapp.com/${uploadImage}`} alt="" />
+                <img src={url} alt="" />
               </DropBox> :
               <Dropzone
                 onDrop={onDrop}
